@@ -1,20 +1,18 @@
 package org.example;
 
-
-public class SumOperation implements Operation{
-
+public class DivOperation implements Operation{
     private double num1;
     private double num2;
     private double res;
 
-    public SumOperation(double num1, double num2) {
+    public DivOperation(double num1, double num2) {
         this.num1 = num1;
         this.num2 = num2;
     }
 
     @Override
     public Operation process() {
-        res = num1 + num2;
+        res = num1 / num2;
         return this;
     }
 
@@ -23,3 +21,4 @@ public class SumOperation implements Operation{
         return this.res;
     }
 }
+
