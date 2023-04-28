@@ -17,7 +17,9 @@ public class ConsoleApplication implements Application{
 
     @Override
     public void run() {
+        writer.write("Enter num1");
         double num1 = reader.readDouble();
+        writer.write("Enter num2");
         double num2 = reader.readDouble();
 
         writer.write("""
@@ -31,22 +33,22 @@ public class ConsoleApplication implements Application{
             case "sum" :
                 SumOperation sumOperation = new SumOperation(num1, num2);
                 Operation calcSum = operationService.calculate(sumOperation);
-                System.out.println(calcSum.getResult());
+                writer.write(calcSum.getResult());
                 break;
             case "sub" :
                 SubOperation subOperation = new SubOperation(num1, num2);
                 Operation calcSub = operationService.calculate(subOperation);
-                System.out.println(calcSub.getResult());
+                writer.write(calcSub.getResult());
                 break;
             case "div" :
                 DivOperation divOperation = new DivOperation(num1, num2);
                 Operation calcDiv = operationService.calculate(divOperation);
-                System.out.println(calcDiv.getResult());
+                writer.write(calcDiv.getResult());
                 break;
             case "mult" :
                 MultOperation multOperation = new MultOperation(num1, num2);
                 Operation calcMult = operationService.calculate(multOperation);
-                System.out.println(calcMult.getResult());
+                writer.write(calcMult.getResult());
                 break;
         }
 

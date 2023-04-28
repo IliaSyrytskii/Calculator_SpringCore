@@ -7,4 +7,7 @@ public class ConsoleWriter {
     void write(String message) {
         System.out.println(message);
     }
+    void write(double res) {
+        System.out.println(res);
+    }
 }

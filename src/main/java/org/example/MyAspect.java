@@ -1,6 +1,6 @@
 package org.example;
 
-import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-@org.aspectj.lang.annotation.Aspect
+@Aspect
 @Component
-public class Aspect {
+public class MyAspect {
 
     private final Logger logger = Logger.getLogger("");
 
@@ -19,7 +19,6 @@ public class Aspect {
 
     @Before("pointCut()")
     public void aspect() {
-        System.out.println("Enter number");
         logger.log(Level.INFO, "Aspect worked up.");
     }
 
